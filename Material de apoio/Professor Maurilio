@@ -1,0 +1,215 @@
+Estrutura semântica do HTML5
+A estrutura semântica trata de convenções que, no início foi comentado, precisamos reforçar para que você tenha consciência do uso do HTML5, evitando retrabalhos. 
+
+Hyper 
+
+Text
+
+Markup
+
+Language
+
+A estrutura do HTML 5 é conforme a imagem abaixo. 
+
+HTML 5 e SEO: mitos e verdades - Tableless - Website com artigos e textos  sobre Padrões Web, Design, Back-end e Front-end tudo em um só lugar.
+
+HEADER 
+
+Usamos para definir um cabeçalho e grupos de títulos. 
+ASIDE
+
+O elemento aside representa um bloco de conteúdo que referência o conteúdo que envolve o elemento aside.
+Pode ser representado por conteúdos em sidebars em textos impressos. 
+Utiliza-se como barra lateral nesse caso. 
+Pode agrupar > navs, headers, sections
+FOOTER
+
+Define o rodapé da página ou de uma determinada seção. 
+NAV
+
+Define um bloco de links ou uma seção de menu. 
+Utilizar quando aqueles links são importantes. 
+ARTICLE
+
+Define uma área de conteúdo, como artigos, textos, redações, etc. 
+MAIN
+
+Determina o conteúdo principal de um documento. * IE 8.9 não suporta
+SECTION
+
+A tag section define uma nova seção genérica no documento.
+Define uma seção ou um grupo de um determinado assunto.
+Geralmente está relacionada a cabeçalhos.
+Agrupa elementos que possuem relação entre si. A section entrou para fazer o papel daqueles blocos, que antes eram utilizados com divs. 
+DIVS
+
+vamos tentar utilizar os divs somente em casos extremos, ou seja, em área que realmente não exista uma direta compreensão semântica (sentido). 
+Exemplo, uma área de um post que não necessita de significados diretos, uma div que captura o resultado de um input e assim por diante. 
+
+
+Instruções gerais:
+
+1. Crie um diretório (pasta) com o nome de EstudoHTML5;
+
+2. Crie uma subpasta para os exercícios HTML;
+
+3. Crie uma subpasta para imagens (coloque 2 ou mais imagens do mesmo tema).
+
+Coloque todos os exercícios de HTML5 nessa pasta.
+
+Abra o seu primeiro arquivo no Visual Studio Code com o nome de exercício01.html e salve-o na pasta indicada acima. 
+
+Abaixo o conteúdo do exercício01.html. Copie e cole no seu arquivo no Visual Studio Code. Ao término,
+vá na sua pasta EstudoHTML5 e abra o exercício01.html em seu browser para ver o resultado. 
+
+
+<!--
+Exercício criado por: Maurilio Benevento
+Data: 21/10/2020
+Executado no: Chrome e Mozilla
+-->
+
+<!DOCTYPE html>
+<html lang="en"></html>
+
+    <!-- Head - Informações para o webserver -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StackX Aulas de HTML5</title>
+</head>
+
+<!-- Conteúdo do seu site -->
+<body>
+    <!-- // Cabeçalho (dentro do corpo) -->
+    <header>
+        <hggroup>
+            <h1>Treinamento em HTML5 da StackX</h1>
+            <h2>Subtítulo do site</h2>
+        </hggroup>
+        <nav>
+            <ul>
+                <li><a href="#"> Link 1 </a></li>
+                <li><a href="#"> Link 2 </a></li>
+                <li><a href="#"> Link 3 </a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- // Conteúdo - Main -->
+    <main>
+        <!-- Exemplo de artigo-->
+        <article>
+            <header>
+                <h2>Título do artigo</h2>
+                <p> Subtítulo do artigo</p>
+            </header>
+            <figure>
+                <img src="imagens/Brasil1.gif" alt="Palavra-chave ou descrição" width="300" height="250" />
+            </figure>
+            <aside>
+                <p> Descrição do anúncio</p>
+            </aside>
+            <footer>
+                <p>Criado por Maurilio</p>
+                <time datetime="21/10/2020"> Data da postagem </time>
+            </footer>
+        </article>
+    </main>
+<!-- // Sidebar direita com relação ao artigo -->
+    <aside>
+        <section>
+            <h2>Seção do artigo relacionado</h2>
+            <p>Conteúdo da section 01</p>
+        </section>
+        <section>
+            <h2>Seção do artigo relacionado</h2>
+            <p>Conteúdo da section 02</p>
+        </section>
+        <section>
+            <h2>Seção do artigo relacionado</h2>
+            <p>Conteúdo da section 03</p>
+        </section>
+    </aside>
+<!-- // Rodapé -->
+    <footer>
+        <nav>
+            <h3>Navegação 01</h3>
+            <ul>
+                <li><a href="#"> Link 1 </a></li>
+                <li><a href="#"> Link 2 </a></li>
+                <li><a href="#"> Link 3 </a></li>
+            </ul>
+        </nav>
+        <nav>
+            <h3>Navegação 02</h3>
+            <ul>
+                <li><a href="#"> Link 1 </a></li>
+                <li><a href="#"> Link 2 </a></li>
+                <li><a href="#"> Link 3 </a></li>
+            </ul>
+        </nav>
+        <nav>
+            <h3>Navegação 03</h3>
+            <ul>
+                <li><a href="#"> Link 1 </a></li>
+                <li><a href="#"> Link 2 </a></li>
+                <li><a href="#"> Link 3 </a></li>
+            </ul>
+        </nav>
+        <address>
+            <p> Para maiores contatos</p>
+            <a href="#">contato@stackx.com.br</a>
+            <p>
+                <a href="http://www.stackx.com.br">Nosso site</a>
+            </p>
+        </address>
+        <p>Copyright 2020 - Todos os direitos reservados</p>
+    </footer>
+</body>
+</html>
+A ideia desse exercício é lhe mostrar que o desenvolvimento de páginas em HTML5 segue uma estrutura ordenada 
+que ajuda a deixar o código mais limpo para você e para outros desenvolvedores que irão dar suporte ao seu código.
+
+
+Treinamento em HTML5 da StackX
+Subtítulo do site
+Link 1
+Link 2
+Link 3
+Título do artigo
+Subtítulo do artigo
+
+Palavra-chave ou descrição
+Descrição do anúncio
+
+Criado por Maurilio
+
+Data da postagem
+Seção do artigo relacionado
+Conteúdo da section 01
+
+Seção do artigo relacionado
+Conteúdo da section 02
+
+Seção do artigo relacionado
+Conteúdo da section 03
+
+Navegação 01
+Link 1
+Link 2
+Link 3
+Navegação 02
+Link 1
+Link 2
+Link 3
+Navegação 03
+Link 1
+Link 2
+Link 3
+Para maiores contatos
+
+contato@stackx.com.br
+Nosso site
+
+Copyright 2020 - Todos os direitos reservados
+ 
