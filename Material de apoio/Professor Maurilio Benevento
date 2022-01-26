@@ -212,4 +212,227 @@ contato@stackx.com.br
 Nosso site
 
 Copyright 2020 - Todos os direitos reservados
+
+
+Outros Elementos HTML importantes - div
+Vejamos abaixo uma tabela contendo outros elementos HTML importantes:
+
+Elemento	Descrição
+<article></article>	Define um artigo – tag estrutural e semântica.
+<aside></aside>	Define algum conteúdo além do conteúdo principal.
+<audio></audio>	Essa tag serve para indicar a inserção de um som.
+<canvas></canvas>	Define uma área de desenho.
+<div></div>	Define uma divisão – tag estrutural.
+<footer></footer>	Define um rodapé – tag estrutural e semântica.
+<header></header>	Define um cabeçalho – tag estrutural e semântica.
+<iframe></iframe>	Define um quadro com conteúdo de outra página.
+<link/>	Possibilita fazer uma linkagem com documentos locais ou globais, como por exemplo fontes ou folhas de estilos.
+<main>	Define o conteúdo principal e exclusivo da página.
+<nav></nav>	Define uma área de navegação (como menus) – tag estrutural e semântica.
+<script></script>	Introduz um código de Script, como JavaScript.
+<section></section>	Define uma seção – tag estrutural e semântica.
+<span></span>	Define um contêiner geral para outros elementos inline.
+<style></style>	Introduz um código CSS ao documento HTML.
+<svg></svg>	Define um contêiner para gráficos SVG.
+<video></video>	Define um campo de vídeo.
+Classes e IDs no HTML
+As classes e os IDs são amplamente utilizados dentro dos elementos HTML. Eles definem um classe ou um ID único a uma ou mais tags HTML. Sua maior utilidade é para manipulação dos elementos, tanto através do CSS quanto de scripts.
+
+Classes
+Para atribuir uma ou mais classes ao elemento, basta incluir o atributo class=”…”.
+
+Por exemplo, se tivermos diversos elementos de parágrafo, e quisermos que os dois primeiros recebam a classe “blue” e os dois últimos a classe “red”, podemos fazer conforme o código abaixo:
+
+<p class="blue">Paragrafo da classe blue</p>
+<p class="blue">Paragrafo da classe blue</p>
+<p class="red">Paragrafo da classe red</p>
+<p class="red">Paragrafo da classe red</p>
+Digamos também que queiramos que o primeiro elemento das classes acima receba também uma classe chamada “primeiro”. Para isto, basta acrescentar a classe “primeiro”, separada apenas com um espaçamento entre ela e as demais classes:
+
+<p class="blue primeiro">Paragrafo da classe blue</p>
+<p class="blue">Paragrafo da classe blue</p> 
+<p class="red primeiro">Paragrafo da classe red</p> 
+<p class="red">Paragrafo da classe red</p>
+Portanto, podemos incluir uma ou mais classes a qualquer elemento, e além disso, vários elementos podem receber uma mesma classe.
+
+No CSS, JavaScript e outros, para poder reconhecer e selecionar uma classe, utilizamos um “.” e o nome da classe. Ou seja, nos casos acima, utilizaríamos “.blue“, “.red” e “.primeiro“.
+
+IDs
+Já os IDs são parecidos com as classes, porém eles são únicos. Só podem ser utilizados em um único elemento, portanto não podem ser repetidos no página. Para declarar o ID, basta chamar o atributo id=”…”. Portanto, digamos que o código tenha três <div> e desejamos que a primeira receba o ID do “primeira_div“, para isso basta usar o código abaixo:
+
+<div id="primeira_div"></div>
+<div></div>
+<div></div>
+Portanto, ao declarar a id “primeira_div” à primeira <div>,  nenhum outro elemento do HTML, mesmo que referente a outra tag, deverá receber este ID. Ele é único e exclusivo deste elemento.
+
+Diferentemente das classes, um ID é reconhecido e selecionado no CSS, JavaScript e outros através do “#“. Ou seja, no exemplo acima, o id seria reconhecida no CSS por “#primeira_div“.
+
+Um elemento pode receber mais que um ID, porém recomenda-se utilizar apenas um único ID em um mesmo elemento.
+
+Mesclando classes e IDs
+Apesar de terem utilidades parecidas, porém diferentes, as classes e os IDs são atributos que podem ser utilizados em conjunto. Um elemento que receba um ID também pode receber uma ou mais classes. Além disso, uma classe pode receber o mesmo nome que um ID, e vice-versa, sem que isso afete sua funcionalidade. Porém, para melhor organização, é recomendado evitar essa prática e manter os nomes sempre diferentes entre IDs e classes.
+
+Vejamos então o exemplo abaixo:
+
+<div id="primeira_div"></div>
+<div class="divisao"></div>
+<div id="terceira_div" class="divisao"></div>
+<div id="quarta_div" class="quarta_div"></div>
+Elemento <article>
+O elemento <article> define um artigo dentro do seu documento. É uma divisão de conteúdo independente, ou seja, de conteúdo especifico completo. Um artigo deve fazer sentido por si só, de forma que seu conteúdo possa ser lido independentemente do restante da página. Geralmente, seu conteúdo consiste em texto e conteúdo gráfico e de multimídia que complementem esse texto.
+
+Exemplos de onde um elemento <article> pode ser usado:
+
+Postagem no fórum
+Postagem no blog
+Artigo de jornal
+Dessa forma, veja o exemplo abaixo:
+
+<body>
+    <article>
+        <h1>Título do meu Artigo</h1>
+        <p>Conteúdo do meu artigo</p>
+        <p>Conteúdo do meu artigo</p>
+        <p>Conteúdo do meu artigo</p>
+    </article>
+</body>
+ 
+
+Elemento <aside>
+O elemento <aside> define algum conteúdo além do conteúdo principal. O conteúdo de <aside> deve estar relacionado ao conteúdo do documento, porém não ser o foco principal deste. É muito utilizado para integrar uma barra lateral, ou ainda uma seção de “saiba mais”, entre outros. Veja um exemplo abaixo:
+
+<main>
+  <article>
+    <p>Essa semana, eu e minha família conhecemos a cidade de São Paulo.</p>
+  </article>
+</main>
+
+<aside>
+  <h4>São Paulo</h4>
+  <p>Capital do estado de São Paulo</p>
+</aside>
+Dica: Geralmente é colocado como uma barra lateral em um documento.
+
+Nota: Não é renderizado como algo especial em um navegador. No entanto, você pode usar CSS para definir o seu estilo.
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+aside {
+  width: 30%;
+  padding-left: 15px;
+  margin-left: 15px;
+  float: right;
+  font-style: italic;
+  background-color: lightgray;
+}
+</style>
+</head>
+<body>
+   <h1>The aside element - Styled with CSS</h1>
+   <p>My family and I visited The Epcot center this summer. 
+      The weather was nice, and Epcot was amazing! 
+      I had a great summer together with my family!</p>
+   <aside>
+      <p>The Epcot center is a theme park at Walt Disney World Resort featuring
+         exciting attractions, international pavilions, award-winning fireworks and 
+         seasonal special events.</p>
+   </aside>
+   <p>My family and I visited The Epcot center this summer. 
+      The weather was nice, and Epcot was amazing! I had a great summer together with
+       my family!</p>
+   <p>My family and I visited The Epcot center this summer. 
+      The weather was nice, and Epcot was amazing! I had a great summer together with
+      my family!</p>
+</body>
+</html>
+
+
+aside.png
+Elemento <audio>
+Essa tag serve para indicar a inserção de um áudio. Com isso, devemos colocar alguns atributos dentro da tag para poder ativar o controle, a principal dela é o controls. Posteriormente, incluímos a tag <source> com os atributos src e type, onde receberão o local em que está o áudio e o tipo do áudio. É recomendado utilizar mais de um tipo de source do mesmo áudio, para garantir maior possibilidade de compatibilidade com o navegador. Finalmente, podemos incluir uma mensagem que será renderizada apenas se o navegador do usuário não suportar a tag áudio.
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <title>Elemento audio da HTML5</title>
+  <meta charset="utf-8">
+</head>
+<body>
+  <audio controls>
+    <source src="som.ogg" type="audio/ogg">
+    <source src="som.mp3" type="audio/mpeg">
+    <source src="som.wav" type="audio/wave">
+    <p>Seu navegador não suporta o elemento audio da HTML5.<br>Faça <a href="som.zip">download de som.zip</a></p>
+  </audio>
+</body>
+</html>
+Prática:
+Faça o download dos arquivos abaixo.
+
+som.mp3  Baixar som.mp3     som.wav  Baixar som.wav      som.ogg  Baixar som.ogg      som.zip Baixar som.zip
+
+Copie e salve o código acima na mesma pasta dos arquivos "baixados".
+
+Visualize o html.
+
+Elemento <video>
+Aproveitando os mesmos conceitos da tag audio, veremos o funcionamento da tag video.
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <title>Elemento video da HTML5</title>
+  <meta charset="utf-8">
+</head>
+<body>
+<video controls>
+    <source src="video.ogv" type="video/ogv">
+    <source src="video.mp4" type="video/mp4">
+    <source src="video.webm" type="video/webm">
+    <!-- Código (X)HTML para inserção de video com Flash -->
+    <p>Seu navegador não suporta o elemento video da HTML5.<br>Faça <a href="video.mp4">download do video</a></p>
+</video>
+</body>
+</html>
+Prática:
+Faça o download dos arquivos abaixo.
+
+video.mp4  Baixar video.mp4     video.webw  Baixar video.webw      video.ogv Baixar video.ogv
+
+Copie e salve o código acima na mesma pasta dos arquivos "baixados".
+
+Visualize o html.
+
+Para que serve uma Div no HTML
+O elemento HTML Div define uma divisão ou seção em um documento HTML. É frequentemente usado como um contêiner para outros elementos, o que facilita na estilização de blocos. Também é muito útil para inclusão de interações com Scripts (JavaScript). Portanto, ele é definido com um contêiner genérico para conteúdo de fluxo.
+
+O div poderá servir, entre outras inúmeras coisas, como uma espécie de caixa com bordas e fundo colorido, para dar um formato visual atraente ao texto dentro dele. Isso deverá ser feito com o uso de CSS.
+
+Diante disso, a HTML Div é muito utilizada quando precisamos agrupar elementos sem a necessidade do uso de um elemento semântico do HTML5. Isso acontece pois o elemento div não possui um valor semântico. Portanto, não representa nada para o navegador e para os mecanismos de buscas.
+
+Como é muito utilizado para agrupar elementos, acaba sendo um facilitador para organizar informações dentro de um layout. Dessa forma, é possível formatar e manipular os elementos, inclusive a própria div, através do CSS de uma forma organizada. Geralmente é acompanhada de atributos de ID e classe, para poder facilitar essa organização e formatação.
+
+
+Como utilizar a HTML Div: a tag <div>
+A sintaxe do elemento div é através da tag de abertura <div> e de fechamento </div>. Por padrão, a div gera uma line-break (quebra de linha) automática ao ser utilizada.
+
+Dessa forma, vamos utilizar algumas divisões para poder separar os parágrafos no nosso exemplo abaixo:
+
+<div><p>Divisão 01</p></div>
+<div><p>Divisão 02</p></div>
+<div><p>Divisão 03</p></div>
+Atributos da Div HTML
+O Elemento HTML Div costuma ter entre seus principais atributos:
+
+id – Define uma ID;
+class – Define uma classe;
+title – Define um título;
+height – Define uma altura;
+width – Define uma largura.
+
+Porém, com exceção do ID, da class e do title, todos os demais atributos já são considerados depreciados. 
+Portanto,dessa forma, podemos definir a altura, a largura e a cor de fundo através do próprio estilo CSS, 
+assim como diversas outras características.
  
