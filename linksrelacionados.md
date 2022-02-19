@@ -1,2 +1,0 @@
-# Semáfaro-Project
-
